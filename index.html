@@ -1,88 +1,102 @@
 <html>
-   <head>
-	   <title>
-		   Will Trojak
-		</title>
-		<script type="text/javascript">
-		  <!--
-		  var arxiv_authorid = "0000-0002-4407-8956";
-		  var arxiv_border_color = "273746"; 
-		  var arxiv_bg_color = "ffffff"; 
-		  var arxiv_entry_color = "ffffff";
-		  var arxiv_format = "arxiv";
-		  //--></script>
-		<style type="text/css">
-		  div.arxivfeed {margin-bottom: 5px;  width:700px;}
-	   </style>
-		<script type="text/javascript" src="https://arxiv.org/js/myarticles.js"></script>
-		
-		<style>
-	      body {
-			font-family: Georgia, serif;
-			font-size: 16px;
-			color: #273746;
-			line-height: 1rem;
-			}
-			h1 {
-			font-family: Verdana, Geneva, sans-serif;
-			color: #273746;
-			font-size: 36px;
-			line-height: 2rem;
-			}
-			h2 {
-			font-family: Verdana, Geneva, sans-serif;
-			font-size: 22px;
-			color: #273746;
-			line-height: 1.5rem;
-			}
-		</style>
-   </head>
+<head>
+  <title>
+    Will Trojak
+  </title>
 
-	<body>
-	   <h1 align = "left">Will Trojak</h1>
+  <link rel="shortcut icon" type="image/png" href="figs/favicon.png"/>
 
-		<h2>bio</h2>
-		<p>I am a PhD student at the University of Cambridge, my research interests
-		include high order numerical methods, high performance computing and quadratures.</p>
+  <style>
+  body {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    color: #273746;
+    line-height: 1rem;
+  }
+  h1 {
+    font-family: Verdana, Geneva, sans-serif;
+    color: #273746;
+    font-size: 36px;
+    line-height: 2rem;
+  }
+  h2 {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 22px;
+    color: #273746;
+    line-height: 1.5rem;
+  }
+  ul {
+    display: block;
+    list-style-type: circle;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 30px;
+  }
+  ol {
+    display: block;
+    list-style-type: decimal;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 30px;
+  }
+  </style>
+</head>
 
-		<h2>src</h2>
-		<p>
-		  <ul>
-         <li><a href='https://github.com/WillTrojak/f90_quadratures'>fortran
-				 quadratures</a> - comprehensive fortran implementation to
-			  calculate 1D quadratures</li>
-         <li><a href='src/oned_fr_sine.F90'>oned_fr_sine.F90</a> - really
-			  basic 1D FR linear advection code</li>
-		  </ul>
-		</p>
+<body>
+  <h1 align = "left">Will Trojak</h1>
 
-		<h2>also see</h2> 
-		<p>
-		  <ul>
-          <li><a href='http://www.cfdbooks.com/'>cfdbooks.com</a> - Hiro's cfd blog</li>
-			 <li><a href='http://people.maths.ox.ac.uk/trefethen/'>ox.ac.uk/trefethen/</a>
-- Nick Trefethen's academic page</li>
-			 <li><a href='https://people.sc.fsu.edu/~jburkardt/'>people.sc.fsu.edu/~jburkardt/</a>
-				- John Burkart's code emporium</li>
-        </ul>
-		</p>
+  <h2>bio</h2>
+  <p>I am a PhD student at the University of Cambridge, my research interests include high order numerical methods, high performance computing and quadratures.</p>
 
-		<h2>furthermore</h2>
-		<p>
-		  <ul style="list-style-type:none">
-		    <li><a href='pages/cv.pdf'>cv</a></li>
-		    <li><a href='pages/arxiv.html'>arxiv papers</a></li>
-		  </ul>
-		</p>
+  <h2>furthermore</h2>
+  <p>
+    <ul>
+      <li><a href='pages/cv.pdf'>cv</a></li>
+      <li><a href='pages/arxiv.html'>arxiv papers</a></li>
+    </ul>
+  </p>
 
-		<p>
-		  <script>
-			 var m = "Last updated: " + document.lastModified;
-			 var p = m.length-8;
-			 document.write(m.substring(p, 0));
-		  </script>
-	   </p>
+  <h2>links</h2>
+  <p>
+    <ul>
+      <li><a href='https://github.com/WillTrojak'>github</a></li>
+      <li><a href='https://bitbucket.org/WillTrojak/'>bitbucket</a></li>
+      <li><a href='https://orcid.org/0000-0002-4407-8956'>orcid</a></li>
+      <li><a href='https://scholar.google.co.uk/citations?user=yXdt5N0AAAAJ&hl=en'>google scholar</a></li>
+      <li><a href='https://www.researchgate.net/profile/William_Trojak'>research-gate</a></li>
+      <li><a href='http://www.eng.cam.ac.uk/profiles/wt247'>departmental webpage</a></li>
+    </ul>
+  </p>
 
-	</body>
+  <h2>also see</h2>
+  <p>
+    <ul>
+      <li><a href='http://www.cfdbooks.com/'>cfdbooks.com</a> - Hiro's cfd blog</li>
+      <li><a href='http://people.maths.ox.ac.uk/trefethen/'>ox.ac.uk/trefethen/</a> - Nick Trefethen's academic page</li>
+      <li><a href='https://people.sc.fsu.edu/~jburkardt/'>people.sc.fsu.edu/~jburkardt/</a> - John Burkart's code emporium</li>
+      <li><a href='https://github.com/vincentlab/PyFRhttps://github.com/vincentlab/PyFR'>PyFR</a> - Vincent Lab's FR implementation </li>
+    </ul>
+  </p>
 
+  <h2>src</h2>
+  <p>
+    <ol>
+      <li><a href='https://github.com/WillTrojak/f90_quadratures'>fortran quadratures</a> - comprehensive fortran implementation to calculate 1D quadratures</li>
+      <li><a href='src/oned_fr_sine.F90'>oned_fr_sine.F90</a> - really basic 1D FR linear advection code</li>
+    </ol>
+  </p>
+
+  <p>
+    <script>
+    var m = "Last updated: " + document.lastModified;
+    var p = m.length-8;
+    document.write(m.substring(p, 0));
+    </script>
+  </p>
+
+</body>
 </html>
