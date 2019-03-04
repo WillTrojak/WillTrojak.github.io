@@ -74,13 +74,22 @@
   p.t4 {display: inline-block;}
 
   div.container {
-   height: 2em;
-   position: relative }              /* 1 */
+    height: 2em;
+    position: relative;
+  }
   div.container p {
-   margin: 0;
-   position: absolute;               /* 2 */
-   top: 50%;                         /* 3 */
-   transform: translate(0, -50%) }   /* 4 */
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%)
+  }
+  .static {
+    position:absolute;
+    background: white;
+  }
+  .static:hover {
+    opacity: 0;
+  }
   </style>
 </head>
 
@@ -88,7 +97,7 @@
   <h1 align = "left">Will Trojak</h1>
 
   <h2>bio</h2>
-  <p class="t3">I am a PhD student at the University of Cambridge, my research interests include high order numerical methods, high performance computing and quadratures.</p>
+  <p class="t3">I'm a PhD student at the University of Cambridge, my research interests include high order numerical methods, high performance computing and quadratures.</p>
 
   <h2>furthermore</h2>
   <p class="t3">
@@ -99,7 +108,7 @@
     </ul>
   </p>
 
-  <h2>links</h2>
+  <h2>my links</h2>
   <p class="t1">
     <ul>
       <li><a href='https://github.com/WillTrojak'>github</a></li>
@@ -111,18 +120,25 @@
     </ul>
   </p>
 
+<br>
 <div class="container">
-  <h3>also see</h3><p class="t2"><a href="pages/also_see.html"><img src="figs/page.png" width="23" height="33" title="also see" alt="page"></a> <br style="clear:both" /></p>
+  <h3>also see</h3>
+  <p class="t2"><a href="pages/also_see.html"><img class="static" src="figs/page1.png" width="23" height="33" title="src" alt="page">
+    <img class="active" src="figs/page2.png" width="23" height="33" title="src" alt="page"></a></p>
 </div>
 
 <br>
 <div class="container">
-  <h3>misc</h3><p class="t2"><a href="pages/misc.html"><img src="figs/page.png" width="23" height="33" title="misc" alt="page"></a> <br style="clear:both" /></p>
+  <h3>misc</h3>
+  <p class="t2"><a href="pages/misc.html"><img class="static" src="figs/page1.png" width="23" height="33" title="src" alt="page">
+    <img class="active" src="figs/page2.png" width="23" height="33" title="src" alt="page"></a></p>
 </div>
 
 <br>
 <div class="container">
-  <h3>src</h3><p class="t2"><a href="pages/src.html"><img src="figs/page.png" width="23" height="33" title="src" alt="page"></a> <br style="clear:both" /></p>
+  <h3>src</h3>
+  <p class="t2"><a href="pages/src.html"><img class="static" src="figs/page1.png" width="23" height="33" title="src" alt="page">
+    <img class="active" src="figs/page2.png" width="23" height="33" title="src" alt="page"></a></p>
 </div>
 
   <p class="t3">
