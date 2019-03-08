@@ -1,0 +1,289 @@
+\documentclass[12pt]{article}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{upgreek}
+\usepackage{float}
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\usepackage{multicol, caption}
+\usepackage{wrapfig}
+\usepackage{amssymb}
+\usepackage{pdflscape}
+\usepackage{breqn}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{cite}
+
+
+\newcommand{\hfd}{\hat{f}^{\delta}}
+\newcommand{\tfd}{\tilde{f}^{\delta}}
+\newcommand{\tfdp}{\tilde{f}^{\delta \prime}}
+\newcommand{\hf}{\hat{f}}
+\newcommand{\hfI}{\hat{f}^{\delta I}}
+\newcommand{\hfC}{\hat{f}^{\delta C}}
+\newcommand{\hfD}{\hat{f}^{\delta D}}
+\newcommand{\bhfd}{\hat{\mathbf{f}}^{\delta}}
+\newcommand{\btfd}{\tilde{\mathbf{f}}^{\delta}}
+
+\newcommand{\hud}{\hat{u}^{\delta}}
+\newcommand\hudi[1]{\hat{u}^{\delta(#1)}}
+\newcommand{\tud}{\tilde{u}^{\delta}}
+\newcommand{\tudp}{\tilde{u}^{\delta \prime}}
+\newcommand{\bhud}{\hat{\mathbf{u}}^{\delta}}
+\newcommand{\btud}{\tilde{\mathbf{u}}^{\delta}}
+\newcommand{\bud}{\mathbf{u}^{\delta}}
+\newcommand{\hu}{\hat{u}}
+\newcommand{\huI}{\hat{u}^{\delta I}}
+\newcommand{\huC}{\hat{u}^{\delta C}}
+
+\newcommand\tb[1]{\tilde{\mathbf{#1}}}
+\newcommand\hb[1]{\hat{\mathbf{#1}}}
+
+\newcommand\px[2]{\frac{\partial #1}{\partial {#2}}}
+\newcommand\pxi[3]{\frac{\partial^{#1}#2}{\partial {#3}^{#1}}}
+\newcommand\dx[2]{\frac{\mathrm{d} #1}{\mathrm{d} #2}}
+\newcommand\dxi[3]{\frac{\mathrm{d}^{#1}#2}{\mathrm{d} {#3}^{#1}}}
+\newcommand\rint[2]{\int^{1}_{-1}{#1} \mathrm{d}{#2}}
+\newcommand\poch[2]{({#1})_{#2}}
+
+\newcommand\jump[1]{\llbracket{#1}\rrbracket}
+\newcommand\mean[1]{\llbrace{#1}\rrbrace}
+\newcommand\abracket[1]{\left\langle{#1}\right\rangle}
+\newcommand\inprod[2]{\abracket{#1|#2}}
+\newcommand{\half}{\frac{1}{2}}
+
+\begin{document}
+
+\title{Reference Equations}
+\author{Will Trojak}
+
+\maketitle
+
+
+
+\section{Navier-Stokes}
+
+
+
+\section{Maxwells' Equations}
+
+	Base Maxwell's Equations
+	\begin{align}
+		\nabla \cdot \mathbf{B} &= 0\\
+		\nabla \cdot \mathbf{E} &= \frac{\rho_c}{\epsilon_0} \\
+		\frac{\partial \mathbf{B}}{\partial t} + \nabla \times \mathbf{E} &= 0 \\ 
+		\frac{1}{\epsilon_0 \mu_0} \frac{\partial \mathbf{E}}{\partial t} - \nabla \times \mathbf{B} &= -\mu_0 \mathbf{j_c} 
+	\end{align}
+
+	A useful conversion is:
+	\begin{equation}
+		\mathrm{E} = \frac{\mathbf{D}}{\epsilon_0}	
+	\end{equation}
+	
+	Casting the equation set into a CFD like conservative form:
+	\begin{align}
+		\frac{\partial \mathbf{Q}}{\partial t} + \nabla \cdot \mathbf{R(\mathbf{Q})} &= \mathbf{S} \\
+		\mathbf{Q} = 
+			\begin{bmatrix}
+       			\mathbf{B} \\
+       			\mathbf{D}
+     		\end{bmatrix} \quad
+     	\mathbf{R} &= \begin{bmatrix}
+       			\mathbf{I} \times \mathbf{D}/\epsilon_0 \\
+       		    -\mathbf{I} \times \mathbf{B}/\mu_0
+     		\end{bmatrix} \quad
+     	\mathbf{S} = \begin{bmatrix}
+     			\mathbf{0} \\
+       			-\mathbf{j}_c
+     		\end{bmatrix}
+	\end{align}		
+	
+	This can then be written as:
+	\begin{align}
+		\mathbf{Q}_t + \mathbf{F}_x + \mathbf{G}_y + \mathbf{H}_z &= \mathbf{S} \\
+		\mathbf{F} = 
+			\begin{bmatrix}
+     			0 \\
+     			-D_k/\epsilon \\
+     			D_j/\epsilon \\
+     			0 \\
+     			B_k /\mu \\
+     			-B_y/\mu
+     		\end{bmatrix} \quad
+     	\mathbf{G} &= 
+			\begin{bmatrix}
+     			D_k/\epsilon \\
+     			0 \\
+     			-D_i/\epsilon \\
+     			-B_k /\mu \\
+     			0\\
+     			B_i/\mu
+     		\end{bmatrix} \quad
+     	\mathbf{H} = 
+			\begin{bmatrix}
+     			-D_j/\epsilon \\
+     			D_i/\epsilon \\
+				0 \\     			
+     			B_j /\mu \\
+     			-B_i/\mu \\
+     			0
+     		\end{bmatrix} \quad
+	\end{align}
+	
+	If divergence cleaning is used then:
+	\begin{align}
+		\mathbf{Q} = 
+			\begin{bmatrix}
+       			\mathbf{B} \\
+       			\mathbf{D} \\
+       			\Phi \\
+       			\Psi 
+     		\end{bmatrix} \quad
+     	\mathbf{R} &= \begin{bmatrix}
+       			\mathbf{I} \times \mathbf{D}/\epsilon + \zeta \mathbf{I}\cdot \Psi\\
+       		    -\mu \mathbf{I} \times \mathbf{B}/ + \chi \mu\mathbf{I}\cdot \Phi/ \\
+       		    \chi \mathbf{E}\\
+       		    \zeta\mu\mathbf{B}
+     		\end{bmatrix} \quad
+     	\mathbf{S} = \begin{bmatrix}
+     			\mathbf{0} \\
+       			-\mathbf{j}_c \\
+       			\zeta \rho_c \\ 
+       			0
+     		\end{bmatrix}
+	\end{align}
+	and 
+	\begin{align}
+		\mathbf{Q}_t + \mathbf{F}_x + \mathbf{G}_y + \mathbf{H}_z &= \mathbf{S} \\
+		\mathbf{F} = 
+			\begin{bmatrix}
+     			\zeta \Psi \\
+     			-D_k/\epsilon \\
+     			D_j/\epsilon \\
+     			\chi \mu \Phi  \\
+     			B_k /\mu \\
+     			-B_y/\mu \\
+     			\chi D_i/\epsilon \\
+     			\zeta B_i/\mu
+     		\end{bmatrix} \quad
+     	\mathbf{G} &= 
+			\begin{bmatrix}
+     			D_k/\epsilon \\
+     			\zeta \Psi \\
+     			-D_i/\epsilon \\
+     			-B_k /\mu \\
+     			\chi \Phi\\
+     			B_i/\mu \\
+     			\chi D_j/\epsilon \\
+     			\zeta B_j/\mu
+     		\end{bmatrix} \quad
+     	\mathbf{H} = 
+			\begin{bmatrix}
+     			-D_j/\epsilon \\
+     			D_i/\epsilon \\
+				\zeta \Psi \\     			
+     			B_j /\mu \\
+     			-B_i/\mu \\
+     			\chi \Phi \\
+     			\chi D_k/\epsilon \\
+     			\zeta B_k /\mu
+     		\end{bmatrix} \quad
+	\end{align}
+
+\section{Orthogonal Polynomials}
+
+\begin{equation}
+		\rint{\xi^nw(\xi)}{\xi} = \mu_n \quad \forall n\in\mathbb{N} \;\; \mathrm{and} \;\; \mu_n\in\mathbb{R}
+	\end{equation}
+	\begin{equation}
+		\rint{P_iP_jw(\xi)}{\xi} = I^w_{i,j}, \quad  P_i,P_j\in P
+	\end{equation}
+	\begin{equation}
+		P_{n+1} = (\xi - a_n)P_n - b_nP_{n-1}, \quad n=0,1,\dots
+	\end{equation}
+
+	\begin{align}
+		a_n &= \frac{\inprod{\xi P_n}{P_n}}{\inprod{P_n}{P_n}}, \quad n\in\{0,1,\dots\}\\
+		b_n &= \frac{\inprod{P_n}{P_n}}{\inprod{P_{n-1}}{P_{n-1}}}, \quad n\in\{1,2,\dots\}
+	\end{align}
+
+	\begin{equation}
+		\inprod{f}{g} = \rint{f(\xi)g(\xi)w(\xi)}{\xi}.
+	\end{equation}
+	
+\section{Flux Reconstruction}
+	\begin{align}
+		\hat{u} &= Ju \\
+		\hat{\mathbf{f}} &= J\mathbf{G}^{-1}\mathbf{f} \\
+		\hat{\nabla}\cdot\hat{\mathbf{f}} &= J \nabla\cdot\mathbf{f} \\
+		\hat{\nabla}u &= \mathbf{G}\nabla u
+	\end{align}
+	
+	\begin{equation}
+		\mathbf{\Omega} = \bigcup^N_{n=1}\mathbf{\Omega}_n \quad \mathrm{and} \quad \bigcap^N_{n=1}\mathbf{\Omega}_n = \emptyset
+	\end{equation}	
+	\begin{equation}
+		\mathbf{G}_n = \begin{bmatrix}
+			\px{x_1}{\xi_1} & \px{x_2}{\xi_1} & \dots & \px{x_d}{\xi_1} \\
+			\px{x_1}{\xi_2} & \px{x_2}{\xi_2} & \dots & \px{x_d}{\xi_2} \\
+			\vdots & \vdots & \ddots & \vdots \\
+			\px{x_1}{\xi_d} & \px{x_2}{\xi_d} & \dots & \px{x_d}{\xi_d}
+		\end{bmatrix} \quad \mathrm{and} \quad J_n = |\mathbf{G}_n| 
+	\end{equation} 
+	
+	\begin{equation}
+		\hat{\nabla} = \begin{bmatrix}
+			\px{}{\xi_1} \\
+			\px{}{\xi_2} \\
+			\vdots
+		\end{bmatrix}
+	\end{equation}
+	
+	\begin{equation}
+		\px{u}{t}  + \px{f}{x} = 0
+	\end{equation}
+	\begin{equation}
+		u^\delta = \bigcup^N_{n=1}u^\delta_n \approx u \quad \mathrm{and} \quad f^\delta = \bigcup^N_{n=1}f^\delta_n \approx f.
+	\end{equation}
+	
+	\begin{equation}
+		\px{\hud}{t} + \px{\hfd}{\xi} = 0
+	\end{equation}
+	
+	\begin{equation}
+		\hud = J_n u^\delta \quad \mathrm{and} \quad \hfd = J_n f^\delta 
+	\end{equation}
+	
+	\begin{equation}
+		\hud = \sum^p_{i=0}\hud_i(\xi) l_i(\xi)
+	\end{equation}
+	\begin{equation}
+		l_i = \prod^p_{\substack{j=0\\j\ne i}}\bigg(\frac{\xi-\xi_j}{\xi_i-\xi_j}\bigg).
+	\end{equation}
+	
+	\begin{equation}
+		\hfD = \sum^{p}_{i=0} \hfD_il_i(\xi)
+	\end{equation}
+	
+	\begin{align}
+		h_L(-1) = 1 \quad &\mathrm{and} \quad h_L(1) = 0; \\
+		h_R(-1) = 0 \quad &\mathrm{and} \quad h_R(1) = 1.
+	\end{align}
+	\begin{equation}
+		\hfC = \Big(\hfI_L - \hfD_L\Big)h_L(\xi) + \Big(\hfI_R - \hfD_R\Big)h_R(\xi)
+	\end{equation}
+	\begin{equation}
+		\hfd = \hfD + \hfC = \hfD(\xi) + \Big(\hfI_L - \hfD_L\Big)h_L(\xi) + \Big(\hfI_R - \hfD_R\Big)h_R(\xi)
+	\end{equation}
+	
+	\begin{equation}
+		\hfd = \hfD + \hfC = \sum^{p}_{i=0}\hfD_il_i(\xi) + \Big(\hfI_L - \hfD_L\Big)h_L(\xi) + \Big(\hfI_R - \hfD_R\Big)h_R(\xi)
+	\end{equation}
+	
+	\begin{equation}
+		\px{\hfd}{\xi} = \sum^{p}_{i=0}\hfD_i\dx{l_i(\xi)}{\xi} + \Big(\hfI_L - \hfD_L\Big)\dx{h_L(\xi)}{\xi} + \Big(\hfI_R - \hfD_R\Big)\dx{h_R(\xi)}{\xi}
+	\end{equation}
+
+\end{document}
