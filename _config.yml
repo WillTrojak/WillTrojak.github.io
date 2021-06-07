@@ -30,7 +30,7 @@ url: "https://willtrojak.org" # the base hostname & protocol for your site, e.g.
 #github_username:  jekyll
 
 # Build settings
-theme: cayman
+theme: Cayman
 plugins:
   - jekyll-feed
 
