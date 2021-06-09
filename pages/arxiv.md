@@ -13,8 +13,6 @@ permalink: /arxiv/
        <meta name="author" content="Will Trojak" />
 
   	   <title>WT/arxiv</title>
-       <link rel="shortcut icon" type="image/png" href="../figs/favicon2.png"/>
-       <link rel="stylesheet" type="text/css" href="../style/base_style.css">
 
   		<script type="text/javascript">
   		  <!--

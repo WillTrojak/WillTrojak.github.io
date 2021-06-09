@@ -28,7 +28,11 @@ github_username:  WillTrojak
 
 # Build settings
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
+
 theme: minima
+#theme: jekyll-theme-clean-blog
 plugins:
   - jekyll-feed
 
@@ -51,3 +55,8 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+mathjax:
+  enable: true
+  per_page: false
+  cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
