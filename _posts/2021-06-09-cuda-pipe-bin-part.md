@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Cuda Binary Partitions and Pipelines"
-date:   2021-06-07 17:26:11 -0500
+date:   2021-06-09 17:26:11 -0500
 categories: cuda
 ---
 
