@@ -32,6 +32,8 @@ kramdown:
   math_engine: mathjax
 
 theme: minima
+minima:
+  skin: dark
 #theme: jekyll-theme-clean-blog
 plugins:
   - jekyll-feed
