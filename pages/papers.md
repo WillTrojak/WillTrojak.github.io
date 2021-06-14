@@ -8,7 +8,6 @@ Papers authored and co-authored by me on various topics relating to numerical me
 
 1. "High-Order Flux Reconstruction on Stretched and Warped Meshes", AIAAJ (2018) - [doi][aiaa-2018]
 1. "A simple flux reconstruction approach to solving a Poisson equation to find wall distances for turbulence modelling", AIAA-Aviation (2018) - [doi][aiaa-2018a]
-1. 
 1. "Temporal Stabilisation of Flux Reconstruction on Linear Problems" AIAA-Aviation (2018) - [doi][aiaa-2018b]
 1. "Turbomachinery Simulation Challenges and the Future", Prog. Aero. Sci. (2019) - [doi][pas-2019]
 1. "Effect of Mesh Quality on Flux Reconstruction in Multi-dimensions", J. Sci. Comp. (2020) - [doi][jsc-2020]

@@ -8,7 +8,7 @@ Here I detail some information about me, for a more formal CV or for references,
 
 # Positions
 
-* October 2019 - Present: Postdoctoral Rsearch Scholar at Texas A&M University under Prof. Freddie Witherden and Prof. Antony Jameson.
+* October 2019 - Present: Postdoctoral Research Scholar at Texas A&M University under Prof. Freddie Witherden and Prof. Antony Jameson.
 * April 2019 - October 2019: Research Assistant at the University of CAmbridge under Prof. Stewart Cant.
 
 # Education
