@@ -11,16 +11,16 @@ For more background you can watch this [talk][talk]. Both these kernels are
 memory bandwidth bound, and so to increase speed we can reduce going out to main
 memory by using shared memory.
 
-Some background on shared memory, it site at the same level as L1 cache, and
-hence has much higher bandwidth, but the user can explicitly perform load and
-store operations on it. However, to load something into shared from global, the
-compiler will first load it from global into a register, and then from the
-register to shared. The reason, at least as far as I can see, for doing this is
-that shared memory is shared between threads in a block, and only after a thread
-sync will it be guaranteed that the value will be resident in shared. Therefore,
-putting it in a register would give the compiler more flexibility when
-optimising. However, this doesn't necessarily fit with what an engineer might
-want.
+Some background on shared memory, it sits at the same level as L1 cache, and
+hence has much higher bandwidth --- but unlike cache --- the user can explicitly
+perform load and store operations on it. However, to load something into shared
+from global, the compiler will first load it from global into a register, and
+then from the register to shared. The reason, at least as far as I can see, for
+doing this is that shared memory is shared between threads in a block, and only
+after a thread sync will it be guaranteed that the value will be resident in
+shared. Therefore, putting it in a register would give the compiler more
+flexibility when optimising. However, this doesn't necessarily fit with what an
+engineer might want.
 
 Enter the Ampere series of GPUs by Nvidia. The interesting thing that was
 introduced with the Ampere was ability to bypass the register stage, and even L1
