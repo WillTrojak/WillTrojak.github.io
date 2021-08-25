@@ -9,7 +9,7 @@ Here I detail some information about me, for a more formal CV or for references,
 # Positions
 
 * October 2019 - Present: Postdoctoral Research Scholar at Texas A&M University under Prof. Freddie Witherden and Prof. Antony Jameson.
-* April 2019 - October 2019: Research Assistant at the University of CAmbridge under Prof. Stewart Cant.
+* April 2019 - October 2019: Research Assistant at the University of Cambridge under Prof. Stewart Cant.
 
 # Education
 
@@ -18,9 +18,11 @@ Here I detail some information about me, for a more formal CV or for references,
 
 # Oral Presentations
 
+* Hyperbolic Diffusion in Flux Reconstruction: Optimisation through Kernel Fusion within Tensor-Product Elements, _CEED Annual Review_, online, August 2021.
+* Shock Capturing in Nodal Spectral Element Methods Via Riemann Solutions for Intra-Element Fluxes, _USNCCM_, online, July 2021.
 * Hyperbolising Diffusion in Flux Reconstruction and the Effect on Performance, _PyFR Seminar Series_, online, June 2021.
 * Fourier Analysis of Polynomial Multigrid for Arbitrary Multi-Stage Cycles, _SIAM CSE-2021_, online, March 2021.
-* Shock Capturing Methods in High-Order Flux Reconstruction: Low-Order Graph Viscosity and Convex Limiting Approaches, _59th AIAA Aerospace Sciences Meeting_, Online, Jan 2021.
+* Shock Capturing Methods in High-Order Flux Reconstruction: Low-Order Graph Viscosity and Convex Limiting Approaches, _59th AIAA Aerospace Sciences Meeting_, online, Jan 2021.
 * Riemann Differencing and Invariant Methods, _Cambridge CFD Mini-symposium_, online, December 2020.
 * Riemann Differencing to Form an Invariant Domain Preserving Method, _SIAM LA-TX_, online, October 2020.  
 * Shock Capturing Methods for Flux Reconstruction, _PyFR Symposium_, online, July 2020.
