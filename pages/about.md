@@ -19,6 +19,7 @@ Here I detail some information about me, for a more formal CV or for references,
 
 # Oral Presentations
 
+* Progress in High-Order for Compressible and Incompressible Flows, _Cambridge CFD Mini-symposium_, Murray--Edwards College, December 2022.
 * Hyperbolic Diffusion in Flux Reconstruction: Optimisation through Kernel Fusion within Tensor-Product Elements, _CEED Annual Review_, online, August 2021.
 * Shock Capturing in Nodal Spectral Element Methods Via Riemann Solutions for Intra-Element Fluxes, _USNCCM_, online, July 2021.
 * Hyperbolising Diffusion in Flux Reconstruction and the Effect on Performance, _PyFR Seminar Series_, online, June 2021.
@@ -38,3 +39,9 @@ Here I detail some information about me, for a more formal CV or for references,
 * Shell Prize for best Master's project, 2016
 * Peterhouse Academic Scholar, 2014-2016
 * First-year computing trading prize, 2013
+
+# Other
+
+I organise an annual CFD symposium in Cambridge, typically in the second week of
+December. If you've like to take part please feel free to get in touch and I can
+add you to the adhoc mailing list.
