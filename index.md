@@ -5,6 +5,9 @@
 layout: home
 ---
 
-I'm a Postdoctoral researcher at Imperial College London, in the Department of Aeronautics. My primary interests are high-order methods, shock-capturing, turbomachinery, and GPU computing.
+I'm a Postdoctoral researcher with IBM Research at the Hartree Centre. My
+primary interests are high-order methods, shock-capturing, turbomachinery, and
+GPU computing.
 
-This website is mainly aimed at being a useful repository of information for myself, but hopefully someone else might find something interesting.
+This website is mainly aimed at being a useful repository of information for
+myself, but hopefully someone else might find something interesting.

@@ -29,7 +29,7 @@ Papers authored and co-authored by me on various topics relating to numerical me
    difference and flux reconstruction schemes", Comp. & Flu. (2021) -
    [doi][caf-2021a]
 1. "Hyperbolic diffusion in flux reconstruction: Optimisation through kernel
-   fusion within tensor-product elements", Comp. Phy. Comm. (2021) - [doi][cpc-2021]
+   fusion within tensor-product elements", Comp. Phy. Comm. (2022) - [doi][cpc-2021]
 
 [aiaa-2018]: https://doi.org/10.2514/1.J056341
 [aiaa-2018a]: https://doi.org/10.2514/6.2018-4261

@@ -8,7 +8,8 @@ Here I detail some information about me, for a more formal CV or for references,
 
 # Positions
 
-* October 2021 - Present: Postdoctoral Associate at Imperial College London under Prof. Peter Vincent.
+* July 2022 - present: Postdoctoral Research Scientist at IBM Research in collaboration with STFC.
+* October 2021 - June 2022: Postdoctoral Associate at Imperial College London under Prof. Peter Vincent.
 * October 2019 - October 2021: Postdoctoral Research Scholar at Texas A&M University under Prof. Freddie Witherden and Prof. Antony Jameson.
 * April 2019 - October 2019: Research Assistant at the University of Cambridge under Prof. Stewart Cant.
 
